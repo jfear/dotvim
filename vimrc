@@ -154,6 +154,11 @@ au BufRead,BufNewfile *.mkd set nonumber
 au BufRead,BufNewfile *.R set number 
 au BufRead,BufNewfile *.r set number 
 
+" BASH
+au BufRead,BufNewfile *.sh set number 
+au BufRead,BufNewfile *.qsub set number 
+
+
 " -----------------------------------------------------------------------
 " SAS Settings 
 " -----------------------------------------------------------------------
