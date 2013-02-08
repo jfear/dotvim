@@ -1,10 +1,13 @@
 Installation:
 
-    git clone https://github.com/jfear/dotvim.git ~/.vim
+    git clone git://github.com/jfear/dotvim.git ~/.vim
 
-Create symlinks:
+Create symlink to vimrc:
 
     ln -s ~/.vim/vimrc ~/.vimrc
+
+If you use gvim create symlink to gvimrc:
+
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
 Switch to the `~/.vim` directory, and fetch submodules:
