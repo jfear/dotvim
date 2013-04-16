@@ -217,6 +217,7 @@ if has("gui_running")
     au BufRead,BufNewfile *.*  set guifont=LiberationMono\ 10
     set guioptions-=T
     set guioptions-=r
+    set guioptions-=L
     colorscheme desert2
     set lines=30 columns=150
 endif
@@ -234,6 +235,11 @@ cab _gnumeric !gnumeric % &
 " Minibufexplorer Plugin Settings
 "-----------------------------------------------------------------------------
 let g:miniBufExplorerMoreThanOne=4
+
+"-----------------------------------------------------------------------------
+" Fugitive Plugin Settings
+"-----------------------------------------------------------------------------
+"set statusline+=%{fugitive#statusline()}
 
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
