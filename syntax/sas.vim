@@ -237,21 +237,21 @@ if version >= 508 || !exists("did_sas_syntax_inits")
    endif
 
    " Default sas enhanced editor color syntax
-	hi sComment	term=bold cterm=NONE ctermfg=Green ctermbg=Black gui=NONE guifg=LightGreen guibg=NONE
+	hi sComment	term=bold cterm=NONE ctermfg=Green gui=NONE guifg=LightGreen guibg=NONE
 	hi sCard	term=bold cterm=NONE ctermfg=Black ctermbg=Yellow gui=NONE guifg=grey guibg=LightYellow
-	hi sDate_Time	term=NONE cterm=bold ctermfg=Green ctermbg=Black gui=bold guifg=SeaGreen guibg=NONE
-	hi sKeyword	term=NONE cterm=NONE ctermfg=Blue  ctermbg=Black gui=NONE guifg=LightBlue guibg=NONE
-	hi sFmtInfmt	term=NONE cterm=NONE ctermfg=LightGreen ctermbg=Black gui=NONE guifg=SeaGreen guibg=NONE
-	hi sString	term=NONE cterm=NONE ctermfg=Magenta ctermbg=Black gui=NONE guifg=pink guibg=NONE
-	hi sText	term=NONE cterm=NONE ctermfg=White ctermbg=Black gui=bold guifg=Grey guibg=NONE
-	hi sNumber	term=NONE cterm=bold ctermfg=Green ctermbg=Black gui=bold guifg=LightGreen guibg=NONE
-	hi sProc	term=NONE cterm=bold ctermfg=Blue ctermbg=Black gui=bold guifg=LightBlue guibg=NONE
-	hi sSection	term=NONE cterm=bold ctermfg=Blue ctermbg=Black gui=bold guifg=LightBlue guibg=NONE
-	hi mDefine	term=NONE cterm=bold ctermfg=White ctermbg=Black gui=bold guifg=Grey guibg=NONE
-	hi mKeyword	term=NONE cterm=NONE ctermfg=Blue ctermbg=Black gui=NONE guifg=LightBlue guibg=NONE
-	hi mReference	term=NONE cterm=bold ctermfg=White ctermbg=Black gui=bold guifg=LightBlue guibg=NONE
-	hi mSection	term=NONE cterm=NONE ctermfg=Blue ctermbg=Black gui=bold guifg=LightBlue guibg=NONE
-	hi mText	term=NONE cterm=NONE ctermfg=White ctermbg=Black gui=bold guifg=Grey guibg=NONE
+	hi sDate_Time	term=NONE cterm=bold ctermfg=Green gui=bold guifg=SeaGreen guibg=NONE
+	hi sKeyword	term=NONE cterm=NONE ctermfg=Blue  gui=NONE guifg=LightBlue guibg=NONE
+	hi sFmtInfmt	term=NONE cterm=NONE ctermfg=LightGreen gui=NONE guifg=SeaGreen guibg=NONE
+	hi sString	term=NONE cterm=NONE ctermfg=Magenta gui=NONE guifg=pink guibg=NONE
+	hi sText	term=NONE cterm=NONE ctermfg=White gui=bold guifg=Grey guibg=NONE
+	hi sNumber	term=NONE cterm=bold ctermfg=Green gui=bold guifg=LightGreen guibg=NONE
+	hi sProc	term=NONE cterm=bold ctermfg=Blue gui=bold guifg=LightBlue guibg=NONE
+	hi sSection	term=NONE cterm=bold ctermfg=Blue gui=bold guifg=LightBlue guibg=NONE
+	hi mDefine	term=NONE cterm=bold ctermfg=White gui=bold guifg=Grey guibg=NONE
+	hi mKeyword	term=NONE cterm=NONE ctermfg=Blue gui=NONE guifg=LightBlue guibg=NONE
+	hi mReference	term=NONE cterm=bold ctermfg=White gui=bold guifg=LightBlue guibg=NONE
+	hi mSection	term=NONE cterm=NONE ctermfg=Blue gui=bold guifg=LightBlue guibg=NONE
+	hi mText	term=NONE cterm=NONE ctermfg=White gui=bold guifg=Grey guibg=NONE
 
 " Colors that closely match SAS log colors for default color scheme
 	hi lError	term=NONE cterm=NONE ctermfg=Red ctermbg=Black gui=none guifg=Red guibg=White
