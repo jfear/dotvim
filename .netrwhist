@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/jfear/.vim/colors'
 let g:netrw_dirhist_2='/home/jfear/.gnome2'
 let g:netrw_dirhist_3='/home/jfear/.vim/bundle/vim-ipython'
+let g:netrw_dirhist_4='/bio/mcintyre/cegs/scripts'
+let g:netrw_dirhist_5='/home/jfear/sas_programs'
