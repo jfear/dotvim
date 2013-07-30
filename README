@@ -15,3 +15,8 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
+
+Add a new submodule
+git submodule add http://github.com/<MODULE> bundle/<MODULE_NAME>
+git add .
+git commit -m "added new module
