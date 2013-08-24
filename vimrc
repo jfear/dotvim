@@ -220,6 +220,7 @@ if has("gui_running")
     set guioptions-=L
     colorscheme desert2
     set lines=30 columns=150
+    set winaltkeys=no
 endif
 
 " ----------------------------------------------------------------------
@@ -272,5 +273,11 @@ let g:vimrplugin_underscore = 0
 noremap <silent> ;;c : call ReformatTable()<CR>
 noremap <silent> ;;f : call ReflowTable()<CR>
 
-
-
+"-----------------------------------------------------------------------------
+" vim-jedi Plugin Settings
+"-----------------------------------------------------------------------------
+"let g:jedi#auto_initialization = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#show_function_definition = "0"
+let g:jedi#use_tabs_not_buffers = 0
