@@ -158,6 +158,8 @@ au BufRead,BufNewfile *.r set number
 au BufRead,BufNewfile *.sh set number 
 au BufRead,BufNewfile *.qsub set number 
 
+" IGV Genome Files
+au BufReadCmd *.genome call zip#Browse(expand(""))
 
 " -----------------------------------------------------------------------
 " SAS Settings 
@@ -277,7 +279,7 @@ noremap <silent> ;;f : call ReflowTable()<CR>
 " vim-jedi Plugin Settings
 "-----------------------------------------------------------------------------
 "let g:jedi#auto_initialization = 0
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#show_function_definition = "0"
-let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#auto_vim_configuration = 0
+"let g:jedi#popup_on_dot = 0
+"let g:jedi#show_function_definition = 0
+"let g:jedi#use_tabs_not_buffers = 0
