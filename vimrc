@@ -280,6 +280,7 @@ noremap <silent> ;;f : call ReflowTable()<CR>
 "-----------------------------------------------------------------------------
 let g:file_template_default = {}
 let g:file_template_default["sas"] = "example"
+let g:VIMFILESDIR = "~/.vim/bundle/file_templates/"
 
 "=============================================================================
 "                                Functions                                      
