@@ -19,15 +19,9 @@
 [submodule "bundle/vimoutliner"]
 	path = bundle/vimoutliner
 	url = https://github.com/vimoutliner/vimoutliner.git
-[submodule "bundle/vim-pandoc"]
-	path = bundle/vim-pandoc
-	url = https://github.com/vim-pandoc/vim-pandoc.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "bundle/vimroom"]
-	path = bundle/vimroom
-	url = https://github.com/mikewest/vimroom.git
 [submodule "bundle/vim-r-plugin"]
 	path = bundle/vim-r-plugin
 	url = https://github.com/jcfaria/Vim-R-plugin.git
