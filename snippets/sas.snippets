@@ -1,0 +1,33 @@
+snippet head
+	/*******************************************************************************
+	* Filename: `Filename('$1.sas')`
+	*
+	* Author: `g:snips_author` | `g:snips_email` 
+
+	* Description: ${1}
+	*
+	*******************************************************************************/
+
+	/* Libraries
+	${2}
+	*/
+
+	${0}
+
+snippet sort
+	proc sort data=${1};
+		by ${2};
+		run;
+	
+snippet data
+	data ${1};
+		set ${2};
+		${3}
+		run;
+
+snippet merge
+	data ${1};
+		merge ${2} (in=in1) ${3} (in=in2);
+		by ${4};
+		${5}
+		run;

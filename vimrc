@@ -276,11 +276,13 @@ noremap <silent> ;;c : call ReformatTable()<CR>
 noremap <silent> ;;f : call ReflowTable()<CR>
 
 "-----------------------------------------------------------------------------
-" file_templates Plugin Settings
+" SnipMate Plugin Settings
 "-----------------------------------------------------------------------------
-let g:file_template_default = {}
-let g:file_template_default["sas"] = "example"
-let g:VIMFILESDIR = "~/.vim/bundle/file_templates/"
+let g:snippets_dir = "~/.vim/snippets"
+let g:snips_author = "Justin M Fear"
+let g:snips_email = "jfear@ufl.edu"
+
+
 
 "=============================================================================
 "                                Functions                                      
