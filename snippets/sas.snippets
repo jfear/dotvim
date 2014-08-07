@@ -43,3 +43,8 @@ snippet make
 		;
 		%include '!MCLAB/${5}';
 		${0}
+	
+snippet clean
+	proc datasets nolist;
+		delete ${1};
+		run;
