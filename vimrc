@@ -276,14 +276,10 @@ noremap <silent> ;;c : call ReformatTable()<CR>
 noremap <silent> ;;f : call ReflowTable()<CR>
 
 "-----------------------------------------------------------------------------
-" vim-jedi Plugin Settings
+" file_templates Plugin Settings
 "-----------------------------------------------------------------------------
-"let g:jedi#auto_initialization = 0
-"let g:jedi#auto_vim_configuration = 0
-"let g:jedi#popup_on_dot = 0
-"let g:jedi#show_function_definition = 0
-"let g:jedi#use_tabs_not_buffers = 0
-
+let g:file_template_default = {}
+let g:file_template_default["sas"] = "example"
 
 "=============================================================================
 "                                Functions                                      
