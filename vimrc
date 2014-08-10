@@ -179,6 +179,8 @@ let Tlist_highlight_Tag_OnBufEnter = 1
 let tlist_sas_settings = 'sas;r:proc;l:label'
 let tlist_lst_settings = 'sasout;l:labels'
 
+noremap <silent> <F9> :y+<CR> :silent !CURR=`xdotool getactivewindow`; xdotool search --name 'SAS: Log' windowactivate; sleep 0.3; xdotool key F9; xdotool windowactivate $CURR;<CR>
+
 " Allows copying to X11 clipboard
 :com -range Cz :silent :<line1>,<line2>w !xsel -i -b
 :com -range Cx :silent :<line1>,<line2>w !xsel -i -p

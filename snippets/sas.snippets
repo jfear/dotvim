@@ -12,8 +12,6 @@ snippet head
 	${2}
 	*/
 
-	${0}
-
 snippet sort
 	proc sort data=${1};
 		by ${2};
@@ -24,7 +22,7 @@ snippet data
 		set ${2};
 		${3}
 		run;
-
+	
 snippet merge
 	data ${1};
 		merge ${2} (in=in1) ${3} (in=in2);
@@ -45,6 +43,18 @@ snippet make
 		${0}
 	
 snippet clean
-	proc datasets nolist;
-		delete ${1};
+	proc datasets ;
+		run; quit;
+	
+snippet trans
+	proc transpose data=${1} out=${2};
+		by ${3};
+		var ${4};
+		id ${5};
 		run;
+	
+snippet freq
+	proc freq data=${1};
+		tables ${2};
+		run;
+	
