@@ -58,3 +58,20 @@ snippet freq
 		tables ${2};
 		run;
 	
+snippet iter
+	%iterdataset(dataset=${1}, function=%nrstr(${2}(${3});));
+
+snippet append
+	proc append base=${1} data=${2};
+	run;
+
+snippet export
+	proc export data=${1} outfile=${2} dbms=csv replace;
+		putnames=yes;
+		run;
+
+snippet import
+	proc import datafile=${1} out=${2} dbsm=csv replace;
+		getnames=yes;
+		run;
+
