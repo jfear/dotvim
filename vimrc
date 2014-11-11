@@ -53,7 +53,6 @@ vnoremap <tab> %
 colorscheme justin
 "colorscheme desert2
 
-
 " -----------------------------------------------------------------------
 " Key Mappings
 " -----------------------------------------------------------------------
@@ -284,6 +283,10 @@ let g:snippets_dir = "~/.vim/snippets"
 let g:snips_author = "Justin M Fear"
 let g:snips_email = "jfear@ufl.edu"
 
+"-----------------------------------------------------------------------------
+" Jedi Plugin Settings
+"-----------------------------------------------------------------------------
+let g:jedi#use_tabs_not_buffers = 0
 
 
 "=============================================================================
@@ -325,4 +328,9 @@ function! MD2VO()
   endfor
   silent %d _
   call setline(1, lines)
+endfunction
+
+function! TestUrl()
+
+
 endfunction

@@ -30,17 +30,17 @@ syn region sasCards	start="^\s*DATALINES.*" end="^\s*;\s*$"
 syn match sasNumber	"-\=\<\d*\.\=[0-9_]\>"
 
 " Block comment
-syn region sasComment	start="/\*"  end="\*/" contains=sasTodo
+syn region sasComment	start="/\*"  end="\*/" contains=sasTodo,@Spell
 
 " Ignore misleading //JCL SYNTAX... (Bob Heckel)
-syn region sasComment	start="[^/][^/]/\*"  end="\*/" contains=sasTodo
+syn region sasComment	start="[^/][^/]/\*"  end="\*/" contains=sasTodo,@Spell
 
 " Previous code for comments was written by Bob Heckel
 " Comments with * may take multiple lines (Paulo Tanimoto)
-syn region sasComment start=";\s*\*"hs=s+1 end=";" contains=sasTodo
+syn region sasComment start=";\s*\*"hs=s+1 end=";" contains=sasTodo,@Spell
 
 " Comments with * starting after a semicolon (Paulo Tanimoto)
-syn region sasComment start="^\s*\*" end=";" contains=sasTodo
+syn region sasComment start="^\s*\*" end=";" contains=sasTodo,@Spell
 
 " This line defines macro variables in code.  HiLink at end of file
 " defines the color scheme. Begin region with ampersand and end with
