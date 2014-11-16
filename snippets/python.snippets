@@ -1,5 +1,6 @@
 snippet head
 	#!/usr/bin/env python
+
 	# Built-in packages
 	import argparse
 	from argparse import RawDescriptionHelpFormatter
@@ -27,15 +28,23 @@ snippet head
 		args = parser.parse_args()
 		return(args)
 
+	def main(args):
+		""" Main Script """
 
 	if __name__ == '__main__':
+		# Turn on Logging if option -g was given
 		args = getOptions()
 
 		# Turn on logging
+		logger = logging.getLogger()
 		if args.debug:
-			mclib.logger.set_logger(args.log, 'debug')
+			mclib.logger.setLogger(logger, args.log, 'debug')
 		else:
-			mclib.logger.set_logger(args.log)
+			mclib.logger.setLogger(logger, args.log)
 
 		# Output git commit version to log, if user has access
 		mclib.git.git_to_log(__file__)
+
+		# Run Main part of the script
+		main(args)
+		logger.info("Script complete.")
