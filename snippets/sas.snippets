@@ -9,7 +9,6 @@ snippet head
 	*******************************************************************************/
 
 	/* Libraries
-	${2}
 	*/
 
 snippet sort
@@ -43,8 +42,9 @@ snippet make
 		${0}
 	
 snippet clean
-	proc datasets ;
-		run; quit;
+	/* Clean up */
+		proc datasets ;
+			run; quit;
 	
 snippet trans
 	proc transpose data=${1} out=${2};
@@ -59,7 +59,7 @@ snippet freq
 		run;
 	
 snippet iter
-	%iterdataset(dataset=${1}, function=%nrstr(${2}(${3});));
+	%iterdataset(dataset=${1}, function=%nrstr(%${2}(${3});));
 
 snippet append
 	proc append base=${1} data=${2};
