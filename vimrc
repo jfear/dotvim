@@ -343,6 +343,8 @@ noremap <silent> ;;f : call ReflowTable()<CR>
 let g:snippets_dir = "~/.vim/snippets"
 let g:snips_author = "Justin M Fear"
 let g:snips_email = "jfear@ufl.edu"
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 "-----------------------------------------------------------------------------
 " Jedi Plugin Settings
