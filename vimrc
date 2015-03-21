@@ -170,6 +170,16 @@ nmap <C-p> "+gP
 nnoremap <F5> "=strftime("%m/%d/%Y")<CR>P
 inoremap <F5> <C-R>=strftime("%m/%d/%Y")<CR>
 
+" Comment code
+autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+autocmd FileType conf,fstab       let b:comment_leader = '# '
+autocmd FileType tex              let b:comment_leader = '% '
+autocmd FileType mail             let b:comment_leader = '> '
+autocmd FileType vim              let b:comment_leader = '" '
+noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
 " -----------------------------------------------------------------------
 " Buffer Settings 
 " -----------------------------------------------------------------------
@@ -297,17 +307,17 @@ cab _gnumeric !gnumeric % &
 "=============================================================================
 
 "-----------------------------------------------------------------------------
-" Minibufexplorer Plugin Settings
+" Minibufexplorer Settings
 "-----------------------------------------------------------------------------
 let g:miniBufExplorerMoreThanOne=4
 
 "-----------------------------------------------------------------------------
-" Fugitive Plugin Settings
+" Fugitive Settings
 "-----------------------------------------------------------------------------
 "set statusline+=%{fugitive#statusline()}
 
 "-----------------------------------------------------------------------------
-" NERD Tree Plugin Settings
+" NERD Tree Settings
 "-----------------------------------------------------------------------------
 " Toggle the NERD Tree on an off with F7
 nmap <F7> :NERDTreeToggle<CR>
@@ -325,20 +335,20 @@ let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$', '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$', '\.embed\.manifest$', '\.embed\.manifest.res$', '\.intermediate\.manifest$', '^mt.dep$' ]
 
 "-----------------------------------------------------------------------------
-" R Plugin Settings
+" R Settings
 "-----------------------------------------------------------------------------
 let vimrplugin_screenplugin = 0
 let vimrplugin_conqueplugin = 1
 let g:vimrplugin_underscore = 0
 
 "-----------------------------------------------------------------------------
-" vim-rst-tables Plugin Settings
+" vim-rst-tables Settings
 "-----------------------------------------------------------------------------
 noremap <silent> ;;c : call ReformatTable()<CR>
 noremap <silent> ;;f : call ReflowTable()<CR>
 
 "-----------------------------------------------------------------------------
-" SnipMate Plugin Settings
+" SnipMate Settings
 "-----------------------------------------------------------------------------
 let g:snippets_dir = "~/.vim/snippets"
 let g:snips_author = "Justin M Fear"
@@ -347,14 +357,20 @@ imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
 "-----------------------------------------------------------------------------
-" Jedi Plugin Settings
+" Jedi Settings
 "-----------------------------------------------------------------------------
-let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#use_tabs_not_buffers = 0
 
 "-----------------------------------------------------------------------------
-" Mediawiki Plugin Settings
+" Mediawiki Settings
 "-----------------------------------------------------------------------------
 autocmd BufRead,BufNewFile /home/jfear/.mozilla/firefox/mwad0hks.default/* set syntax=mediawiki
+
+"-----------------------------------------------------------------------------
+" Syntastic Settings
+"-----------------------------------------------------------------------------
+"let g:syntastic_python_checkers=['flagke8']
+let g:syntastic_python_flake8_args='--ignore=E501'
 
 "=============================================================================
 "                                Functions                                      
