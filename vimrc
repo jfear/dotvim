@@ -38,6 +38,7 @@ Plugin 'vim-scripts/bash-support.vim'
 Plugin 'vim-scripts/csv.vim'
 Plugin 'vim-scripts/perl-support.vim'
 Plugin 'ynkdir/vim-diff'
+Plugin 'vimwiki/vimwiki'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -373,6 +374,11 @@ autocmd BufRead,BufNewFile /home/jfear/.mozilla/firefox/mwad0hks.default/* set s
 "-----------------------------------------------------------------------------
 "let g:syntastic_python_checkers=['flagke8']
 let g:syntastic_python_flake8_args='--ignore=E501'
+
+"-----------------------------------------------------------------------------
+" vimwiki Settings
+"-----------------------------------------------------------------------------
+let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'index': 'Home', 'syntax': 'markdown'}]
 
 "=============================================================================
 "                                Functions                                      
