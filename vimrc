@@ -180,6 +180,7 @@ autocmd FileType conf,fstab       let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
 autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
+autocmd FileType sas              let b:comment_leader = '* '
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
@@ -227,6 +228,14 @@ au BufRead,BufNewfile *.mkd set nonumber
 au BufRead,BufNewfile *.R set number 
 au BufRead,BufNewfile *.r set number 
 
+" SAS
+au BufRead,BufNewfile *.sas set number 
+au BufRead,BufNewfile *.sas set foldmethod=indent 
+au BufRead,BufNewFile *.sas set syntax=sas
+au BufRead,BufNewFile *.sas set nospell
+au BufRead,BufNewFile *.lst set syntax=off
+au BufRead,BufNewFile *.log set syntax=sas
+
 " BASH
 au BufRead,BufNewfile *.sh set number 
 au BufRead,BufNewfile *.qsub set number 
@@ -241,12 +250,6 @@ au BufReadCmd *.genome call zip#Browse(expand(""))
 " This adds the abbreviaton so that at the command-line if you type
 " sas it will run sas on that file
 cab _sas !sas % -noterminal
-
-" vim thinks sas .lst files are assembly files.
-au BufRead,BufNewFile *.lst set syntax=off
-au BufRead,BufNewFile *.log set syntax=sas
-au BufRead,BufNewFile *.sas set syntax=sas
-au BufRead,BufNewFile *.sas set nospell
 
 let Tlist_highlight_Tag_OnBufEnter = 1
 let tlist_sas_settings = 'sas;r:proc;l:label'
