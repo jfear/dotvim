@@ -223,6 +223,7 @@ au BufRead,BufNewfile *.mkd set lbr
 au BufRead,BufNewfile *.mkd set tw=80
 au BufRead,BufNewfile *.mkd set spell spelllang=en
 au BufRead,BufNewfile *.mkd set nonumber 
+au BufRead,BufNewfile *.mkd set syntax=markdown 
 
 " R
 au BufRead,BufNewfile *.R set number 
