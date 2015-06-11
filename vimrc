@@ -40,6 +40,7 @@ Plugin 'vim-scripts/perl-support.vim'
 Plugin 'ynkdir/vim-diff'
 Plugin 'vimwiki/vimwiki'
 Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/seoul256.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -115,8 +116,8 @@ nnoremap ,<space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-colorscheme justin
-"colorscheme desert2
+let g:seoul256_background = 234
+colorscheme seoul256
 
 " -----------------------------------------------------------------------
 " Key Mappings
@@ -300,7 +301,6 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
-    colorscheme desert2
     set lines=30 columns=150
     set winaltkeys=no
 endif
