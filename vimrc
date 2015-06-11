@@ -39,6 +39,7 @@ Plugin 'vim-scripts/csv.vim'
 Plugin 'vim-scripts/perl-support.vim'
 Plugin 'ynkdir/vim-diff'
 Plugin 'vimwiki/vimwiki'
+Plugin 'junegunn/goyo.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
