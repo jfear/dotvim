@@ -246,6 +246,15 @@ au BufRead,BufNewfile *.qsub set number
 " IGV Genome Files
 au BufReadCmd *.genome call zip#Browse(expand(""))
 
+" CSV
+au BufRead,BufNewfile *.csv set ft=csv 
+au BufRead,BufNewfile *.csv set nonumber 
+
+" TSV
+au BufRead,BufNewfile *.tsv set ft=csv 
+au BufRead,BufNewfile *.tsv set noexpandtab 
+au BufRead,BufNewfile *.tsv set nonumber 
+
 " -----------------------------------------------------------------------
 " SAS Settings 
 " -----------------------------------------------------------------------
