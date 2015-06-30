@@ -18,17 +18,17 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'chikamichi/mediawiki.vim'
+"Plugin 'chikamichi/mediawiki.vim'
 Plugin 'cskeeters/vim-calutil'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'godlygeek/tabular'
-Plugin 'ivanov/vim-ipython'
+"Plugin 'ivanov/vim-ipython'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'nvie/vim-rst-tables'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'tomtom/tlib_vim'
+"Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -41,6 +41,8 @@ Plugin 'ynkdir/vim-diff'
 Plugin 'vimwiki/vimwiki'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/seoul256.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'bling/vim-airline'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -104,6 +106,7 @@ set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
+set mouse=a
 
 set ignorecase
 set smartcase
@@ -177,12 +180,11 @@ inoremap <F5> <C-R>=strftime("%m/%d/%Y")<CR>
 
 " Comment code
 autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-autocmd FileType conf,fstab       let b:comment_leader = '# '
+autocmd FileType sh,ruby,pythoni,conf,fstab   let b:comment_leader = '# '
 autocmd FileType tex              let b:comment_leader = '% '
-autocmd FileType mail             let b:comment_leader = '> '
 autocmd FileType vim              let b:comment_leader = '" '
 autocmd FileType sas              let b:comment_leader = '* '
+
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 
@@ -193,10 +195,6 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 " This will make it so that folds are saved and loaded on startup
 au BufWinLeave * mkview
 au BufWinEnter *.* silent loadview
-
-" automatically give executable permissions if file begins with #! and contains
-" '/bin/' in the path
-"au BufWritePost *.pl if getline(1) =~ "^#!/usr/bin/perl" | silent !chmod a+x <afile> | endif 
 
 " Change to the current directory of the current file
 autocmd BufEnter * lcd %:p:h
@@ -348,9 +346,6 @@ let NERDTreeBookmarksFile="~/.vim/NERDTreeBookmarks"
 " Show the bookmarks table on startup
 let NERDTreeShowBookmarks=1
 
-" Don't display these kinds of files
-let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$', '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$', '\.embed\.manifest$', '\.embed\.manifest.res$', '\.intermediate\.manifest$', '^mt.dep$' ]
-
 "-----------------------------------------------------------------------------
 " R Settings
 "-----------------------------------------------------------------------------
@@ -374,19 +369,8 @@ imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
 
 "-----------------------------------------------------------------------------
-" Jedi Settings
-"-----------------------------------------------------------------------------
-"let g:jedi#use_tabs_not_buffers = 0
-
-"-----------------------------------------------------------------------------
-" Mediawiki Settings
-"-----------------------------------------------------------------------------
-autocmd BufRead,BufNewFile /home/jfear/.mozilla/firefox/mwad0hks.default/* set syntax=mediawiki
-
-"-----------------------------------------------------------------------------
 " Syntastic Settings
 "-----------------------------------------------------------------------------
-"let g:syntastic_python_checkers=['flagke8']
 let g:syntastic_python_flake8_args='--ignore=E501'
 
 "-----------------------------------------------------------------------------
@@ -398,6 +382,11 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 " YouCompleteMe Settings
 "-----------------------------------------------------------------------------
 let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
+
+"-----------------------------------------------------------------------------
+" tagbar Settings
+"-----------------------------------------------------------------------------
+nmap ,b :TagbarToggle<CR>
 
 "=============================================================================
 "                                Functions                                      

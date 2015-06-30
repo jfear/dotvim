@@ -4,7 +4,6 @@ bundle/Vim-R-plugin/
 bundle/YouCompleteMe/
 bundle/bash-support.vim/
 bundle/csv.vim/
-bundle/mediawiki.vim/
 bundle/minibufexpl.vim/
 bundle/nerdtree/
 bundle/perl-support.vim/
@@ -25,3 +24,5 @@ bundle/visincr/
 bundle/vimwiki
 bundle/goyo.vim
 bundle/seoul256.vim
+bundle/tagbar/
+bundle/vim-airline/
