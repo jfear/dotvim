@@ -382,6 +382,7 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 " YouCompleteMe Settings
 "-----------------------------------------------------------------------------
 let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
+nnoremap ,jd :YcmCompleter GoTo<CR>
 
 "-----------------------------------------------------------------------------
 " tagbar Settings
