@@ -43,12 +43,13 @@ snippet make
 	
 snippet clean
 	/* Clean up */
-		proc datasets nolist;
+		proc datasets nolist;${1}
 			run; quit;
 	
 snippet clean2
 	* Clean up;
 	proc datasets nolist;
+		delete ${1}
 		run; quit;
 	
 snippet trans
