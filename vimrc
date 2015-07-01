@@ -44,6 +44,7 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
+Plugin 'EricGebhart/SAS-Vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -237,7 +238,8 @@ au BufRead,BufNewfile *.r set number
 au BufRead,BufNewfile *.sas set number 
 au BufRead,BufNewfile *.sas set foldmethod=indent 
 au BufRead,BufNewFile *.sas set syntax=sas
-au BufRead,BufNewFile *.sas set nospell
+au BufRead,BufNewFile *.sas set formatoptions=tcq
+au BufRead,BufNewFile *.sas set tw=80
 au BufRead,BufNewFile *.lst set syntax=off
 au BufRead,BufNewFile *.log set syntax=sas
 
