@@ -43,8 +43,13 @@ snippet make
 	
 snippet clean
 	/* Clean up */
-		proc datasets ;
+		proc datasets nolist;
 			run; quit;
+	
+snippet clean2
+	* Clean up;
+	proc datasets nolist;
+		run; quit;
 	
 snippet trans
 	proc transpose data=${1} out=${2};
@@ -54,7 +59,7 @@ snippet trans
 		run;
 	
 snippet freq
-	proc freq data=${1};
+	proc freq data=${1} noprint;
 		tables ${2};
 		run;
 	
@@ -77,3 +82,13 @@ snippet import
 
 snippet today
 	%sysfunc(today(), yymmddn8.)
+
+snippet print
+	proc print data=${1};
+	run;
+
+snippet means
+	proc means data=${1} noprint;
+		by ${2};
+		output out=${3} ;
+		run;
