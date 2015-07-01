@@ -170,7 +170,7 @@ nmap <F6> :setlocal spell! spelllang=en<CR>
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
 
 " Add shortcut for setting folding
-noremap <silent> ,fi :set foldment=indent<CR>
+noremap <silent> ,fi :set foldmethod=indent<CR>
 
 " Add blank line below/above 
 nnoremap + maO<esc>`a
