@@ -28,7 +28,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'nvie/vim-rst-tables'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-"Plugin 'tomtom/tlib_vim'
+Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -43,6 +43,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -167,6 +168,9 @@ nmap <F6> :setlocal spell! spelllang=en<CR>
 
 " Add shortcut for wrapping
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
+
+" Add shortcut for setting folding
+noremap <silent> ,fi :set foldment=indent<CR>
 
 " Add blank line below/above 
 nnoremap + maO<esc>`a
