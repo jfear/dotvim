@@ -18,12 +18,10 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-"Plugin 'chikamichi/mediawiki.vim'
 Plugin 'cskeeters/vim-calutil'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'godlygeek/tabular'
-"Plugin 'ivanov/vim-ipython'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'nvie/vim-rst-tables'
 Plugin 'scrooloose/nerdtree'
@@ -390,11 +388,17 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 "-----------------------------------------------------------------------------
 "let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
 "nnoremap ,jd :YcmCompleter GoTo<CR>
+"
+"-----------------------------------------------------------------------------
+" Jedi-vim Settings
+"-----------------------------------------------------------------------------
+let g:jedi#show_call_signatures = "0"
+map ,b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 "-----------------------------------------------------------------------------
 " tagbar Settings
 "-----------------------------------------------------------------------------
-nmap ,b :TagbarToggle<CR>
+nmap ,t :TagbarToggle<CR>
 
 "=============================================================================
 "                                Functions                                      
