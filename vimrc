@@ -32,7 +32,6 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-scripts/bash-support.vim'
 Plugin 'vim-scripts/csv.vim'
@@ -45,6 +44,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'EricGebhart/SAS-Vim'
+Plugin 'davidhalter/jedi-vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -378,7 +378,7 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 "-----------------------------------------------------------------------------
 " Syntastic Settings
 "-----------------------------------------------------------------------------
-let g:syntastic_python_flake8_args='--ignore=E501 --ignore=F401'
+let g:syntastic_python_flake8_args='--ignore=E501,F401'
 
 "-----------------------------------------------------------------------------
 " vimwiki Settings
@@ -388,8 +388,8 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 "-----------------------------------------------------------------------------
 " YouCompleteMe Settings
 "-----------------------------------------------------------------------------
-let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
-nnoremap ,jd :YcmCompleter GoTo<CR>
+"let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
+"nnoremap ,jd :YcmCompleter GoTo<CR>
 
 "-----------------------------------------------------------------------------
 " tagbar Settings
