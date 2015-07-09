@@ -240,6 +240,7 @@ au BufRead,BufNewfile *.sas set foldmethod=indent
 au BufRead,BufNewFile *.sas set syntax=sas
 au BufRead,BufNewFile *.sas set formatoptions=tcq
 au BufRead,BufNewFile *.sas set tw=80
+au BufRead,BufNewFile *.sas let b:did_indent=1
 au BufRead,BufNewFile *.lst set syntax=off
 au BufRead,BufNewFile *.log set syntax=sas
 
@@ -330,7 +331,7 @@ cab _gnumeric !gnumeric % &
 "-----------------------------------------------------------------------------
 " Minibufexplorer Settings
 "-----------------------------------------------------------------------------
-let g:miniBufExplorerMoreThanOne=4
+let g:miniBufExplorerMoreThanOne=2
 
 "-----------------------------------------------------------------------------
 " Fugitive Settings
@@ -377,7 +378,7 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 "-----------------------------------------------------------------------------
 " Syntastic Settings
 "-----------------------------------------------------------------------------
-let g:syntastic_python_flake8_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501 --ignore=F401'
 
 "-----------------------------------------------------------------------------
 " vimwiki Settings
