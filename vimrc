@@ -393,7 +393,9 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 " Jedi-vim Settings
 "-----------------------------------------------------------------------------
 let g:jedi#show_call_signatures = "0"
-map ,b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+let g:jedi#popup_on_dot = "0"
+
+map ,b Oimport ipdb; ipdb.set_trace()<C-c>
 
 "-----------------------------------------------------------------------------
 " tagbar Settings
