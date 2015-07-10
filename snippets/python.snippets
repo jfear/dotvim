@@ -21,9 +21,9 @@ snippet head
 
 		group2 = parser.add_argument_group(description="Output Files")
 		group2.add_argument("-o", dest="oname", action='store', required=True, help="Name of output FASTA. [Required]")
-		group2.add_argument("--log", dest="log", action='store', required=False, help="Name of the LOG file [Optional]") 
+		group2.add_argument("--log", dest="log", action='store', required=False, help="Name of the LOG file [Optional]")
 
-		parser.add_argument("--debug", dest="debug", action='store_true', required=False, help="Enable debug output.") 
+		parser.add_argument("--debug", dest="debug", action='store_true', required=False, help="Enable debug output.")
 
 		args = parser.parse_args()
 		return(args)
