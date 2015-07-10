@@ -376,7 +376,7 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 "-----------------------------------------------------------------------------
 " Syntastic Settings
 "-----------------------------------------------------------------------------
-let g:syntastic_python_flake8_args='--ignore=E501,F401'
+let g:syntastic_python_flake8_args='--ignore=E501,F401,W391'
 
 "-----------------------------------------------------------------------------
 " vimwiki Settings
