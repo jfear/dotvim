@@ -43,6 +43,7 @@ Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'EricGebhart/SAS-Vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
@@ -236,7 +237,7 @@ au BufRead,BufNewfile *.r set number
 au BufRead,BufNewfile *.sas set number 
 au BufRead,BufNewfile *.sas set foldmethod=indent 
 au BufRead,BufNewFile *.sas set syntax=sas
-au BufRead,BufNewFile *.sas set formatoptions=tcq
+au BufRead,BufNewFile *.sas set formatoptions=cq
 au BufRead,BufNewFile *.sas set tw=80
 au BufRead,BufNewFile *.sas let b:did_indent=1
 au BufRead,BufNewFile *.lst set syntax=off
@@ -270,7 +271,7 @@ let Tlist_highlight_Tag_OnBufEnter = 1
 let tlist_sas_settings = 'sas;r:proc;l:label'
 let tlist_lst_settings = 'sasout;l:labels'
 
-noremap <silent> <F9> :y+<CR> :silent !CURR=`xdotool getactivewindow`; xdotool search --name 'SAS: Log' windowactivate; sleep 0.3; xdotool key F9; xdotool windowactivate $CURR;<CR>
+noremap <silent> <F10> :y+<CR> :silent !CURR=`xdotool getactivewindow`; xdotool search --name 'SAS: Log' windowactivate; sleep 0.3; xdotool key F9; xdotool windowactivate $CURR;<CR><C-L><CR>
 
 " Allows copying to X11 clipboard
 :com -range Cz :silent :<line1>,<line2>w !xsel -i -b
@@ -392,8 +393,9 @@ let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'in
 "-----------------------------------------------------------------------------
 " Jedi-vim Settings
 "-----------------------------------------------------------------------------
-let g:jedi#show_call_signatures = "0"
-let g:jedi#popup_on_dot = "0"
+let g:jedi#completions_enabled = 0
+"let g:jedi#show_call_signatures = "0"
+"let g:jedi#popup_on_dot = "0"
 
 map ,b Oimport ipdb; ipdb.set_trace()<C-c>
 
