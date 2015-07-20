@@ -164,7 +164,8 @@ map <F1> <Esc>
 imap jj <Esc>
 
 " Add shortcut for spelling
-nmap <F6> :setlocal spell! spelllang=en<CR>
+"nmap <F6> :setlocal spell! spelllang=en<CR>
+nmap ,ss :setlocal spell! spelllang=en<CR>
 
 " Add shortcut for wrapping
 nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
@@ -237,6 +238,7 @@ au BufRead,BufNewfile *.r set number
 au BufRead,BufNewfile *.sas set number 
 au BufRead,BufNewfile *.sas set foldmethod=indent 
 au BufRead,BufNewFile *.sas set syntax=sas
+au BufRead,BufNewFile *.sas set comments=s1:/*,mb:*,ex:*/
 au BufRead,BufNewFile *.sas set formatoptions=cq
 au BufRead,BufNewFile *.sas set tw=80
 au BufRead,BufNewFile *.sas let b:did_indent=1
