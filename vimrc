@@ -35,7 +35,6 @@ Plugin 'vim-scripts/bash-support.vim'
 Plugin 'vim-scripts/csv.vim'
 Plugin 'vim-scripts/perl-support.vim'
 Plugin 'ynkdir/vim-diff'
-Plugin 'vimwiki/vimwiki'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'majutsushi/tagbar'
@@ -380,11 +379,6 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Syntastic Settings
 "-----------------------------------------------------------------------------
 let g:syntastic_python_flake8_args='--ignore=E501,F401,W391'
-
-"-----------------------------------------------------------------------------
-" vimwiki Settings
-"-----------------------------------------------------------------------------
-let g:vimwiki_list = [{'path': '~/wiki', 'path_html': '~/tmp', 'ext': '.md', 'index': 'Home', 'syntax': 'markdown'}]
 
 "-----------------------------------------------------------------------------
 " YouCompleteMe Settings
