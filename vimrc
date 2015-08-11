@@ -115,6 +115,8 @@ set incsearch
 set showmatch
 set hlsearch
 
+command Bd bp\|bd \#            " This will close a buffer and not close split
+
 "let mapleader = ","
 nnoremap ,<space> :noh<cr>
 nnoremap <tab> %

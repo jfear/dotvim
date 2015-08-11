@@ -29,3 +29,4 @@ bundle/vim-airline/
 bundle/ctrlp.vim/
 bundle/SAS-Vim/
 bundle/jedi-vim
+bundle/vim-instant-markdown
