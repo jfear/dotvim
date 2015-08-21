@@ -396,6 +396,7 @@ let g:jedi#completions_enabled = 0
 "let g:jedi#popup_on_dot = "0"
 
 map ,b Oimport ipdb; ipdb.set_trace()<C-c>
+map ,i Ofrom IPython import embed; embed()<C-c>
 
 "-----------------------------------------------------------------------------
 " tagbar Settings
