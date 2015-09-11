@@ -43,6 +43,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'EricGebhart/SAS-Vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'suan/vim-instant-markdown'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'visincr'
