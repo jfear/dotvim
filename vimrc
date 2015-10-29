@@ -263,6 +263,17 @@ au BufRead,BufNewfile *.tsv set ft=csv
 au BufRead,BufNewfile *.tsv set noexpandtab 
 au BufRead,BufNewfile *.tsv set nonumber 
 
+" Python
+au BufRead,BufNewfile *.py set number 
+au BufRead,BufNewfile *.py set foldmethod=indent 
+au BufRead,BufNewFile *.py set syntax=python
+
+" Snakemake
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.rules set syntax=snakemake
+au BufNewFile,BufRead *.snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
+
 " -----------------------------------------------------------------------
 " SAS Settings 
 " -----------------------------------------------------------------------
