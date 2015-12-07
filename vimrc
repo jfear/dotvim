@@ -30,19 +30,19 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-scripts/bash-support.vim'
 Plugin 'vim-scripts/csv.vim'
 Plugin 'vim-scripts/perl-support.vim'
 Plugin 'ynkdir/vim-diff'
-Plugin 'junegunn/goyo.vim'
+"Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'EricGebhart/SAS-Vim'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'suan/vim-instant-markdown'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -403,11 +403,12 @@ let g:syntastic_python_flake8_args='--ignore=E501,F401,W391'
 "-----------------------------------------------------------------------------
 "let g:ycm_filetype_blacklist = {'csv': 1, 'markdown': 1, 'text': 1, 'pandoc': 1}
 "nnoremap ,jd :YcmCompleter GoTo<CR>
+"let g:ycm_path_to_python_interpreter='/Users/fearjm/opt/miniconda/bin/python'
 "
 "-----------------------------------------------------------------------------
 " Jedi-vim Settings
 "-----------------------------------------------------------------------------
-let g:jedi#completions_enabled = 0
+"let g:jedi#completions_enabled = 0
 "let g:jedi#show_call_signatures = "0"
 "let g:jedi#popup_on_dot = "0"
 
