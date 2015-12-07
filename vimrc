@@ -270,9 +270,13 @@ au BufRead,BufNewFile *.py set syntax=python
 
 " Snakemake
 au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead Snakefile set number
+au BufNewFile,BufRead Snakefile set foldmethod=indent
 au BufNewFile,BufRead *.rules set syntax=snakemake
 au BufNewFile,BufRead *.snakefile set syntax=snakemake
 au BufNewFile,BufRead *.snake set syntax=snakemake
+au BufNewFile,BufRead *.snake set number
+au BufNewFile,BufRead *.snake set foldmethod=indent
 
 " -----------------------------------------------------------------------
 " SAS Settings 

@@ -1,7 +1,7 @@
-Vim syntax file
-" Language:   Snakemake (extended from python.vim)
-" Maintainer: Jay Hesselberth (jay.hesselberth@gmail.com)
-" Last Change:    2015 Jul 1 
+" Vim syntax file
+" Language:	Snakemake (extended from python.vim)
+" Maintainer:	Jay Hesselberth (jay.hesselberth@gmail.com)
+" Last Change:	2015 Jul 1 
 "
 " Usage
 "
@@ -30,8 +30,7 @@ source $VIMRUNTIME/syntax/python.vim
 " include    = "include:" stringliteral
 " workdir    = "workdir:" stringliteral
 " ni         = NEWLINE INDENT
-" ruleparams = [ni input] [ni output] [ni params] [ni message] [ni threads]
-[ni (run | shell)] NEWLINE snakemake
+" ruleparams = [ni input] [ni output] [ni params] [ni message] [ni threads] [ni (run | shell)] NEWLINE snakemake
 " input      = "input" ":" parameter_list
 " output     = "output" ":" parameter_list
 " params     = "params" ":" parameter_list
@@ -42,22 +41,21 @@ source $VIMRUNTIME/syntax/python.vim
 " run        = "run" ":" ni statement
 " shell      = "shell" ":" stringliteral
 
-syn keyword pythonStatement   include workdir onsuccess onerror
-syn keyword pythonStatement   ruleorder localrules configfile
-syn keyword pythonStatement   touch protected temp
-syn keyword pythonStatement   input output params message threads resources
-syn keyword pythonStatement   version run shell benchmark snakefile log
-syn keyword pythonStatement   rule subworkflow nextgroup=pythonFunction
-skipwhite
+syn keyword pythonStatement	include workdir onsuccess onerror
+syn keyword pythonStatement	ruleorder localrules configfile
+syn keyword pythonStatement	touch protected temp
+syn keyword pythonStatement	input output params message threads resources
+syn keyword pythonStatement	version run shell benchmark snakefile log
+syn keyword pythonStatement	rule subworkflow nextgroup=pythonFunction skipwhite
 
 " similar to special def and class treatment from python.vim, except
 " parenthetical part of def and class
 syn match   pythonFunction
       \ "\%(\%(rule\s\|subworkflow\s\)\s*\)\@<=\h*" contained
 
-      syn sync match pythonSync grouphere NONE
-      "^\s*\%(rule\|subworkflow\)\s\+\h\w*\s*"
+syn sync match pythonSync grouphere NONE "^\s*\%(rule\|subworkflow\)\s\+\h\w*\s*"
 
 let b:current_syntax = "snakemake"
 
 " vim:set sw=2 sts=2 ts=8 noet:
+
